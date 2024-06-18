@@ -22,7 +22,8 @@ import { ErrorElement } from './components';
 // actions
 import { action as registerAction } from './pages/Register';
 import { action as loginAction } from './pages/Login';
-import { action as forgotpassword } from './pages/Forgotpassword';
+import { action as forgotpassword } from './pages/ForgotPassword';
+import { action as changepassword } from './pages/Changepassword';
 
 import { store } from './store';
 
@@ -56,6 +57,7 @@ const router = createBrowserRouter([
       {
         path: 'changepassword',
         element: <Changepassword />,
+        action: changepassword,
       },
       {
         path: 'profile',
