@@ -101,14 +101,15 @@ export const action =
       // );
       // console.log("5 serverResp5");
       // console.log(serverResp5);
-      const responseData = JSON.parse(serverResp2.data.text);
-      console.log(responseData);
-      if (responseData.code ==="authenticator_locked") {
-        toast.error("Account locked out try after some time");
-        return null;
-         }
+      
+      // const responseData = JSON.parse(serverResp2.data.text);
+      // console.log(responseData);
+      // if (responseData.code ==="authenticator_locked") {
+      //   toast.error("Account locked out try after some time");
+      //   return null;
+      //    }
 
-       else if (serverResp2.journeyStepId ==="transmit_platform_email_otp_authentication") {
+        if (serverResp2.journeyStepId ==="transmit_platform_email_otp_authentication") {
         // console.log("##inside stepup...");
         // const mfaSelection = prompt(
         //   "Select MFA method: 1. email_otp, 2. sms_otp"
