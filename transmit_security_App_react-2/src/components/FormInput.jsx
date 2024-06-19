@@ -1,4 +1,4 @@
-const FormInput = ({ label, name, type, value, onChange, size }) => {
+const FormInput = ({ label, name, type, value, onChange, size, hint }) => {
   return (
     <div className='form-control'>
       <label htmlFor={name} className='label'>
@@ -11,6 +11,7 @@ const FormInput = ({ label, name, type, value, onChange, size }) => {
         className={`input input-bordered ${size}`}
         onChange={onChange} // Pass the onChange handler
       />
+      {hint && <small className="form-hint">{hint}</small>}
     </div>
   );
 };

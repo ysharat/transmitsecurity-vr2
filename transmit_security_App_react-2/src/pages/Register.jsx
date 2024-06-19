@@ -91,7 +91,7 @@ const Register = () => {
          <FormInput type='text' label='city' name='city' defaultValue="brampton"/>
          <FormInput type='text' label='state' name='state' defaultValue="On"/>
          <FormInput type='text' label='country' name='country' defaultValue="canda"/>
-         <FormInput type='password' label='Password' name='password' defaultValue="Welcome@123" />
+         <FormInput type='password' label='Password' name='password' defaultValue="Welcome@123" hint='Password must contain at least 1 letter, 1 number, and be at least 8 characters long.'  />
         
         <div className='mt-4'>
           <SubmitBtn text='register' />
