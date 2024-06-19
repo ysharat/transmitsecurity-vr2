@@ -27,10 +27,18 @@ export const action =
       }
     );
 
-    console.log("2. started login journey serverresp:");
+    console.log("2. started forgotpassword journey serverresp:");
     console.log(journeyResponse);
 
-    if (journeyResponse.journeyStepId === "stepup_method_selection") 
+    const serverResp21 = await tsPlatform.ido.submitClientResponse(
+      "client_input",
+      {}
+    );
+    console.log("21 serverResp5");
+    console.log(serverResp21);
+
+
+    if (serverResp21.journeyStepId === "stepup_method_selection") 
 		{
           console.log("##inside stepup...");
           const mfaSelection = prompt(
@@ -87,8 +95,8 @@ export const action =
           console.log(serverResp7);
           
           let data= {
-            password:'Sucess@1234',
-            confirm_password:'Sucess@1234',
+            password:'Welcome@123',
+            confirm_password:'Welcome@123',
             username:'test1fn@yopmail.com'
           };
           const serverResp8 = await tsPlatform.ido.submitClientResponse(
